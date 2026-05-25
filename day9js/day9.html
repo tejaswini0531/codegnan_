@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    
+
+    static page
+    html 
+    css 
+    bootstrap
+
+    dynamic webpage
+    javascript
+
+    addtocart
+    filter
+    search
+    sorting
+    validation
+
+    javascript
+    javascript is a programming language that is used to create
+    dynamic functionality to the webpages
+
+    introduces brendan eich
+
+    how to insert javascript
+    1) inline
+    <button onclick='console.log("from inline js")'>click me</button>
+    2) internal
+    <script>
+        console.log('from internal')
+    </script>
+    3) external
+    we need create a file with .js extension
+
+    link with script
+    <script src='demo.js'>
+        
+    </script>
+    variables
+    datatypes
+    condtional statements
+    loops
+  
+
+
+
+    -->
+    <button onclick='console.log("from inline js")'>click me</button>
+
+
+    <script>
+        console.log('from internal')
+
+        /*
+        
+        variables
+        variables are the containers for storing data and the data
+        could be anything
+
+        variables are defined with var ,let and const keywords
+        followed by variable name
+
+        var a=10;
+        let b=20;
+        const c=30;
+        console.log(a,b,c)
+
+        variable terms
+
+        variable declaration
+        var data;
+
+
+        undefined- a varaible without an value
+        console.log(data) undefined
+
+        assignment
+        data=20;
+
+        not defined
+        console.log(val)//error-variable is not defined
+
+        initialization----declaration+assignment
+        var a=10
+
+        hoisting
+        it is behaviour in js where the declaration of an varaible
+        and functions are moved to to even before the execution
+
+        console.log(a)//undefined
+        var a;
+         a=10;
+ 
+        // var a=10;
+        // let b=20;
+        // const c=30;
+        // console.log(a,b,c)
+        
+        // var data;
+
+        // console.log(data)
+        // data=20;
+        // console.log(data)
+
+        // console.log(val)
+      
+
+
+
+        datatypes
+        1)primitive datatypes
+        which stores single value
+        which are immutable
+
+        a) strings
+        collections of chraccters which are enclosed in single or double qyotes
+     
+         let str='hello'
+        str[0]='z'
+        console.log(str)
+
+        b) numbers
+        let num=1
+        let n2=10.6
+        let n3=-10
+
+        c) boolean
+        let admin=true
+        let premium=true
+        let status=false
+
+        d) undefined
+        var a;
+        console.log(a)
+        
+        e) null- it represents the intensional absence of an value
+        let ceo=null
+
+        typeof
+        it tells the datatype
+
+
+      let str='hello'
+      let num=10.9
+      let admin=true
+      let status=false
+      let data;
+      let a=null
+      let b=3
+      console.log(a+b)
+
+      console.log(typeof str)
+      console.log(typeof num)
+      console.log(typeof admin)
+      console.log(typeof data)
+      console.log(typeof a)
+
+        2) non primitive datatypes
+        which stores multiple values
+        which are mutable
+
+        a) array
+        it is used to store the mutiple items in a single variable
+        let arr=[1,2,3,4]
+        console.log(arr)
+        console.log(arr[0])
+        console.log(typeof arr)//object
+
+        b) object
+        it is used to store the data in a key value pairs
+let data={
+    batchno:1,
+    age:25,
+    id:3738
+}
+console.log(data)
+console.log(data.age)//dot method
+console.log(data['age'])//square method
+
+c_) functions
+functiosn are reusable part of code that is used to perform one action
+when someone invokes it
+
+function sum(a,b){
+console.log(a+b)
+}
+sum(1,2)
+sum(3,3)
+
+conditional statemetns
+
+        if (condtion){
+        //code
+        }else if(conditon2){
+        //code
+        }
+        else{
+        //code
+        }
+
+
+
+          let marks=Number(prompt('enter your marks'))
+        if(marks>70){
+            console.log('grade a')
+        }else if(marks> 35){
+            console.log('grade b')
+        }else{
+            console.log('fail')
+        }
+
+
+        loops
+        for loop
+        for (initilization;condition;updation){
+        consoel.log()
+        }
+
+        for(i=0;i<=10;i++){
+        console.log(i)
+        }
+
+        while loop
+
+        intialization
+
+        while(condi){
+        code
+        
+        increment}
+
+
+
+         while(true){
+        let menu=prompt('enter you menu')
+        console.log(menu)
+        if(menu=='done'){
+            break
+        }
+    }
+
+
+    for in 
+    we can iterate string, array and objects-keys
+
+       let arr=['html','css','js']
+    for (i in arr){
+        console.log(i)//index
+        console.log(arr[i])//values
+    }
+
+        let str='hello'
+    for (i in str){
+        console.log(i)//index
+        console.log(str[i])//values
+    }
+
+    let obj={
+        name:'john',
+        age:25
+    }
+    for (i in obj){
+        console.log(i)//keys
+        console.log(obj[i])//values
+    }
+    for of- string and array
+     for (i of arr){
+        console.log(i)
+    }
+    
+        */ 
+    
+
+
+    // for in and for off
+    let str='hello'
+        for (i of str){
+            if(i=='l'){
+                continue
+                // break
+            }
+            console.log(i)
+
+    }
+
+
+  
+      
+
+    </script>
+     <script src='demo.js'>
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 
+    div and span tag
+    div is used to group a elements for applying styles
+    <div style="background:blue;">
+        <h1>home</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi alias eligendi magni corporis ullam esse temporibus accusamus eaque. Quia enim maxime nam consectetur totam ducimus, libero pariatur accusamus facilis quis.</p>
+    </div>
+
+    span is used to group a text for applying styles
+    <p> <span style="background:green"> Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. <span style="background:yellow"> Quasi alias </span>eligendi magni corporis ullam esse temporibus accusamus eaque. Quia enim maxime nam consectetur totam ducimus, libero pariatur accusamus facilis quis.</p>
+
+
+    
+    semantic tags
+    <header>content</header>
+    <nav>content</nav>
+    <section>content</section>
+    <aside>content</aside>
+    <article>images</article>
+    <footer>content</footer>
+
+    forms
+    form ---main for the fields
+    label--it display the information about an field
+
+
+    attributes
+    placeholder ---to show extra info about a field
+    required--it indicates field must contain some value
+    value--pre defined value
+    name--it acts as a key
+    for and id---to build the relation
+
+
+    -->
+
+</head>
+<body>
+    <form action="formsubmit co">
+        <label for="un">Full name</label> <br>
+        <input id="un" type="text" placeholder="Enter your full name" required value="" name="uname">
+        <br>
+
+        <br>
+        <label  for="em">Email address</label> <br>
+        <input  id="em" type="email" placeholder="Enter your email">
+        <br>
+
+        <br>
+        <label for="">Password</label> <br>
+        <input type="password" placeholder="Create a password">
+        <br>
+
+        <br>
+        <label for="">Confirm password</label> <br>
+        <input type="password" placeholder="Confirm your password">
+        <br>    
+        
+        <br>
+        <div>Gender</div>
+        <input type="radio" name="gender" value="male" id="m">
+        <label for="m">male</label>
+        <input type="radio" name="gender" value="female" id="fm">
+        <label for="fm">female</label>
+        <input type="radio" name="gender" value="other" id="o">
+        <label for="o">other</label>
+        <br>
+
+        <br>
+        <label for="">Date of birth</label> <br>
+        <input type="date">
+        <br>
+
+        <br>
+        <label for="c">Country</label><br>
+        <select name="country" id="c">
+            <option value="in">india</option>
+            <option value="us">usa</option>
+            <option value="uk">uk</option>
+        </select>
+        <br>
+
+        <br>
+        <div>select your skills</div>
+        <input type="checkbox" id =h>
+        <label for="h">html</label>
+        <input type="checkbox" id = s>
+        <label for="s">css</label>
+        <input type="checkbox" id = j>
+        <label for="j">js</label>
+        <br>
+
+        <br>
+        <input type="checkbox">
+        <label for="">I agree to the terms of services and privacy policy</label>
+        <br>
+
+        <textarea name="" id="" rows="5" cols="4"></textarea>
+        <br>
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+
+    </form>
+
+
+
+</body>
+</html>

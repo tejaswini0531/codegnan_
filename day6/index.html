@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        header{
+            background-color: rgb(27, 26, 26);
+            color:white;
+            padding:20px 40px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+        }
+        header>div{
+            display:flex;
+            gap:10px;
+            align-items:center;
+
+        }
+
+        .s1{
+            background-color: rgb(27, 26, 26);
+            color:white;
+            padding:20px 40px;
+            display:flex;
+            height:80vh;
+            align-items:center;
+        }
+        .s1>div{    
+            flex-basis:50%;
+        }
+        img{
+            width:100%;
+        }
+        .s1>div>h3, .s1>div>h4,.s1>div>p{
+            padding-bottom:10px;
+        }
+        button{
+            padding:10px;
+            border-radius:10px;
+            background:green;
+            color:white;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="left">
+            <div>JD</div>
+            <h2>Johndue</h2>
+        </div>
+        <div class="right">
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+            <div>About</div>
+        </div>
+    </header>
+
+
+    <section class="s1">
+        <div>
+            <h3>Hi, I'm <span style="color:green;"> John Doe</span></h3>
+            <h4>I build simple and clean websites.</h4>
+            <p>I am a web development student who loves turning ideas into real, working web pages.</p>
+            <button>View projects</button>
+            <button>Download cv</button>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
+        </div>
+    </section>
+</body>
+</html>

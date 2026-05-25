@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        
+        universal selector
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        }
+
+        combinators
+        child selector
+                header>a{
+            
+        }
+
+
+        font properties
+        font-size: 2rem;
+        font-family:monospace;
+        font-weight:900;
+
+
+    <p style="font-size:2rem;font-family:monospace;font-weight:200">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut et labore inventore debitis explicabo, molestiae corrupti soluta? Quod illo dolore hic blanditiis veritatis ab, nisi, cupiditate asperiores expedita harum ex!</p>
+
+
+    text-align:center or left or right;
+    text-shadow:1px 1px 5px red;
+    box-shadow:1px 1px 5px 2px red;
+        */
+        h1{
+    text-shadow:1px 1px 2px blueviolet  ;
+
+        }
+         *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        }
+
+        header{
+            background-color:rgb(9, 9, 27);
+            text-align:center;
+            padding:30px;
+            
+        }
+        header>a{
+            color:white;
+            background-color:rgb(21, 64, 234);
+            padding:10px;
+            border-radius:10px;
+            margin:10px;
+        }
+
+
+        .s1{
+            height:700px;
+            background-size:100% 100%;
+            color:white;
+            text-align:center;
+            padding-top:300px;
+         background-image:  linear-gradient(rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+        }
+
+        .s2{
+            background-color:whitesmoke;
+            text-align:center;
+            height:500px;
+            padding-top:150px;
+        }
+        .s2>ul>li{
+
+            color:white;
+            margin:10px;
+            border-radius:10px;
+            padding:20px;
+            width:200px;
+            height:120px;
+            display:inline-block;
+        }
+
+        .s3{
+            height:500px;
+            text-align:center;
+            padding-top:150px;
+        }
+        .child{
+            background-color:rgba(176, 237, 236, 0.742);
+            border:3px solid blue;
+            display:inline-block;
+            width:300px;
+            height:200px;
+            padding:40px;
+            margin:10px;
+            border-radius:20px;
+    box-shadow:1px 1px 5px 2px black;
+
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Contact</a>
+    </header>
+    <section class="s1">
+        <h1>Learn CSS Through Projects</h1>
+        <p>This project demonstrates CSS Colors, Backgrounds, Inline & Inline-Block, Box Model, and Fonts in one modern UI.</p>
+    </section>
+
+    <section class="s2">
+        <h1>CSS colors</h1>
+        <ul>
+            <li style="background-color:red">content</li>
+            <li style="background-color:blue">content</li>
+            <li style="background-color:green">content</li>
+            <li style="background-color:violet">content</li>
+        </ul>
+    </section>
+
+
+    <section class="s3">
+        <h1>CSS Box Model</h1>
+        <div class="card">
+            <div class="child">
+                <h1>Card One</h1>
+                <p>This card demonstrates padding, border, margin, width, and background color.</p>
+            </div>
+            <div class="child">
+                
+                 <h1>Card One</h1>
+                <p>This card demonstrates padding, border, margin, width, and background color.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="s2" style="font-size:1.6rem">
+        <h1>CSS Fonts</h1>
+        <div style="font-weight:300;padding:10px;">light font weight -300 </div>
+        <div style="font-weight:400;padding:10px;">Normal  font  weight -400 </div>
+        <div style="font-weight:700;padding:10px;">Bold font weight -700 </div>
+        <p>This paragraph demonstrates line-height, letter-spacing, font-size, and font-family properties in CSS.</p>
+    </section>
+
+    <footer style="background:rgb(14, 14, 43);color:white;padding:40px; text-align:center;">
+        CSS Learning Project Template
+    </footer>
+
+
+</body>
+</html>
