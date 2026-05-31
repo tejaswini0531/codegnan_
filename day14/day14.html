@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        /*
+        es-6 concepts
+        let const
+        arrow function
+        destructuring
+        spread operator
+        
+
+        localstorage
+
+
+        var 
+
+        declaration
+        var a;
+
+        assignment 
+        a=10;
+
+        initilization
+        var a=10;
+
+
+        hoisting
+        console.log(b)
+        var b=20
+
+        var 
+        redclaration is allowed
+        assignment is allowed
+        hoisting is allowed
+        scopes- global and local scope
+
+
+        let 
+        redclaration is not allowed
+        assignment is allowed
+        hoisting is not allowed because it was in tdz
+        scopes- global,block and local scope
+
+        const
+        redclaration is not allowed
+        assignment is not allowed only initialized is allowed
+        hoisting is not allowed because it was in tdz
+        scopes- global,block and local scope
+
+
+        function sum(a,b){
+        return a+b;
+         }
+         console.log(sum(1,2))
+
+
+         arrow function
+         it is more concise way of writing a function 
+       
+        let sum= (a,b)=>{
+        return a+b;
+         }
+         console.log(sum(2,3))  
+
+
+         we can eliminate {} and returns because it automatically applies  the return keyword
+         when there is no braces
+         let sum=(a,b)=>a+b
+         console.log(sum(2,3))  
+
+
+         we can eleminate () when there is a single parameter
+         let sum=a=>a+a
+         console.log(sum(2))  
+
+
+
+         localstorage
+         let data='hello'
+         let data2=123
+         let data3=[{name:'john'}]
+
+
+         let data='hello'
+         let data2=123
+         let data3=[{name:'john'}]
+         
+         localStorage.setItem('d1',data)
+         localStorage.setItem('d2',data2)
+         localStorage.setItem('d3',JSON.stringify(data3))
+         
+         
+         let a=localStorage.getItem('d1')
+         let b=localStorage.getItem('d2')
+         let c=JSON.parse(localStorage.getItem('d3'))
+         console.log(a)
+         console.log(b)
+         console.log(c)
+         
+         
+         
+         map-it is used to create a transformed array by applying provided function
+         for every elemnet
+         let a=[1,2,3]
+         let data=a.map((val,ind,ar)=>{
+         console.log(val)
+         })
+
+
+         filter 
+         it is used to create a filtere array by applying a boolena funciion 
+         for every element
+         let filterdata=a.filter((val,ind,ar)=>{
+         return val%2==0
+         })
+         console.log(filterdata)
+
+         reduce
+         it is used to reduce the array of element into single value
+         let arr=[1,2,3]
+
+         let total=arr.reduce((acc,val,ind,ar)=>{
+         return acc+val},0)
+         console.log(total)
+ 
+
+        
+         */
+        let a=[{name:'john',age:25},{name:'jessy',age:23},{name:'jack',age:17}]
+        let container=document.getElementById('container')
+
+         let data=a.map((val,ind,ar)=>{
+            container.innerHTML+=`<h1>${val.name}</h1>`
+            console.log(val)
+            console.log(ind)
+            console.log(ar)
+            return val.age+val.age
+        
+         })
+         console.log(data)
+
+        //  let inp=prompt('enter age')
+        //  let filtereddata=a.filter((val)=>{
+        //     return val.age>inp
+        //  })
+        //  console.log(filtereddata)
+
+        let b=a.reduce((acc,val)=>val.age+acc,0)
+        console.log(b)
+        
+        let arr=[1,2,3]
+         let total=arr.reduce((acc,val,ind,ar)=>{
+         return acc+val},0)
+         console.log(total)
+    </script>
+</body>
+</html>

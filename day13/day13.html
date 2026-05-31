@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        synchronous
+        which executes line by line
+        which doesnot takes time
+        
+        asynchronous
+        parallel level of execution
+        timers
+        api calls
+        console.log('one')
+        setTimeout(()=>{ 
+            console.log('two')  
+        },0)
+        console.log('three')
+
+        1) callbacks
+        2) promises
+        promises are used to represent evetual completion or failure of an
+        async operation
+    
+
+        promise had three states
+        1) fullfilled
+        2) rejected
+        3) pending
+
+        promise had promise creation
+        let prom=new Promise((res,rej)=>{
+        let val=10
+        if(val==10){
+        res('promise is resolved')
+        }else{
+        rej('promise is failed')
+        }
+        })
+
+        promise had promise consumption
+        then catch
+
+  prom.then((data)=>console.log(data))
+        .catch((err)=>console.log(err))
+
+
+        3) async await- it is used to handle asynchronous operation
+          async function checkdata(){
+            let a=await prom
+            console.log(a)//error
+        }
+        checkdata()
+
+
+        fetch()-it is used to make api call in js
+
+        fetch(apilink)
+        fetch returns a promise
+        to consume a promise
+        1) then catch
+        2) async await
+
+
+        */ 
+
+        let apilink='https://fakestoreapi.com/products'
+
+        fetch(apilink).then((val)=>val.json())
+        .then((data)=>console.log(data))
+        .catch((err)=>console.log(err))
+
+        async function getapidata(){
+    
+            let val=await fetch(apilink)
+            let finalval=await val.json()
+            console.log(finalval)
+        }
+        getapidata()
+
+      
+
+
+
+      
+
+
+    </script>
+</body>
+</html>

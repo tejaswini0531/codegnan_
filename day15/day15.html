@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*
+        spread operator
+
+        shallow copy-assiging a reference insetead of valuue
+        let a=[1,2,3]
+       let b=a
+       b[0]='html'
+       console.log(a)//`html23
+       console.log(b)//html23
+        
+       deep copy-we will use spread operator
+       spread is denoted by ...
+       it is used in strings ,arrays and objects
+
+
+
+       let a=[1,2,3]
+       let b=[...a]
+       b[0]='html'
+       console.log(a)
+       console.log(b)
+       
+       let obj1={name:'john'}
+       let obj2={age:25}
+       let obj3={...obj1,...obj2}
+       console.log(obj3)
+
+       let str='hello'
+       let spreadstr=[...str]
+       console.log(spreadstr)
+       
+
+       destructuring
+       it is a process of extracting values from object and arrays and
+       assigining to a variables
+
+       
+       */ 
+      let tech=[[['html','css'],['js','react']],[['mysql'],['python','flask']]]
+      let [[static,dynamic],[database,backend]]=tech
+      console.log(static)
+      console.log(dynamic)
+      console.log(database  )
+      console.log(backend)
+
+      let obj={
+        name:'john',
+        age:25,
+        address:{
+            city:'vizag',
+            state:'andhra'
+        }
+      }
+      let {name,age,address:{city,state}}=obj
+      console.log(city)
+       </script>
+</body>
+</html>

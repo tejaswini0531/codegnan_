@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced To-Do App</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial;
+    }
+
+    body {
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 450px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .input-box {
+      display: flex;
+      gap: 10px;
+    }
+
+    input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      background: black;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #333;
+    }
+
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f9f9f9;
+      padding: 12px;
+      margin-top: 15px;
+      border-radius: 5px;
+    }
+
+    .delete-btn {
+      background: red;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial;
+    }
+
+    body {
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 450px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .input-box {
+      display: flex;
+      gap: 10px;
+    }
+
+    input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      background: black;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #333;
+    }
+
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f9f9f9;
+      padding: 12px;
+      margin-top: 15px;
+      border-radius: 5px;
+    }
+
+    .delete-btn {
+      background: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>To-do App</h1>
+    <div class="input-box">
+      <input type="text" placeholder="Enter task" id="inp">
+      <button onclick="getdata()">Add</button>
+    </div>
+    <div id="tasklist"> </div>
+  </div>
+
+  <script>
+    let arr =JSON.parse(localStorage.getItem('onlinetasks')) || []
+    displaytask()
+    function getdata() {
+      let inp = document.getElementById('inp')
+      if (inp.value == '') {
+        alert('please enter value ')
+        return
+      }
+      arr.push(inp.value)
+      localStorage.setItem('onlinetasks',JSON.stringify(arr))
+      console.log(arr)
+      inp.value = ''
+
+      displaytask()
+    }
+
+
+    function displaytask(){
+      let tasklist=document.getElementById('tasklist')
+      tasklist.innerHTML=arr.map((val,ind)=>{
+        return `
+        <div class='task'>
+          <h3>${val}</h3>
+          <button class='delete-btn' onclick='deletetask(${ind})'>delete</button>
+          </div>
+        `
+      })
+    }
+
+    function deletetask(index){
+       arr=arr.filter((val,ind)=>{
+        return ind!=index
+      })
+      localStorage.setItem('onlinetasks',JSON.stringify(arr))
+
+      displaytask()
+    }
+
+  </script>
+
+
+
+
+</body>
+
+</html>

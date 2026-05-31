@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="" id="registerform">
+        <input type="text" id="inp1" placeholder="enter your name">
+        <input type="text" id="inp2" placeholder="enter your mail">
+        <button type="submit" >submit</button>
+    </form> 
+
+    <script>
+        let form=document.getElementById('registerform')
+        form.onsubmit=function(event){
+            event.preventDefault()
+            // console.log(event.target[0].value)
+            // console.log(event.target[1].value)
+            let inp1=document.getElementById('inp1')
+            let inp2=document.getElementById('inp2')
+            console.log(inp1.value)
+            console.log(inp2.value)
+        }
+
+        // regex-
+        // let pattern=/hello/
+        // let pattern=/[A-Z]+/
+        let emailpattern=/[a-zA-Z0-9_.]+@[a-z]+\.[a-z]{3}/
+        let text='saiteja@gmail.com'
+        console.log(text.match(emailpattern))
+
+        let passwordpattern=/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8}/
+        let password='Sai@1fdd'
+        console.log(password.match(passwordpattern))
+
+    </script>
+</body>
+</html>
